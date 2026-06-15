@@ -53,3 +53,43 @@ let trimMe = "     Hello World     ";
 console.log(trimMe.trim()); //Hello World
 console.log(trimMe.trimStart()); //Hello World
 console.log(trimMe.trimEnd()); //     Hello World
+//padStart()
+let myNumber = "5";
+console.log(myNumber.padStart(5, "*")); //****5
+console.log(myNumber.padEnd(2, "$")); // 5$
+
+//split -> returns split string as an Array
+let myCSVDetails = "Akki Aashi Varma Anu";
+let myCSVDetailsArray = myCSVDetails.split(" ");
+console.log(myCSVDetailsArray); //['Akki', 'Aashi', 'Varma', 'Anu']
+
+//Array to String
+/*
+1. toString() -> Will convert as string with comma separated
+2. Join() -> If you need any other separator then use join method
+*/
+console.log(myCSVDetailsArray.toString()); //Akki,Aashi,Varma,Anu
+console.log(myCSVDetailsArray.join("*")); //Akki*Aashi*Varma*Anu
+console.log(myCSVDetailsArray.join(" ")); //Akki Aashi Varma Anu
+
+//search the String
+/* 
+1. indexOf -> return the index position of a string if exits,otherwise it will return -1
+2. includes -> if String present then it will return true otherwise false
+3. search
+4. match
+*/
+
+let searchString = "Apple Banana Kiwi";
+console.log(searchString.indexOf("Banana")); //6
+console.log(searchString.indexOf("Mango")); //-1
+
+console.log(searchString.includes("Banana")); // true
+console.log(searchString.includes("Mango")); // false
+
+//startswith() -> String starting with particular sting
+console.log(searchString.startsWith("Banana")); //false
+console.log(searchString.startsWith("Apple")); //true
+
+console.log(searchString.endsWith("Banana")); //false
+console.log(searchString.endsWith("Kiwi")); //true
